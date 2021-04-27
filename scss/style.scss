@@ -1,0 +1,208 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+body{
+	background-color:$colorGris;
+}
+header{
+	background:$gradiente1;
+	min-height:80px;
+	display:flex;
+	align-items:center;
+	justify-content: space-around;
+	width: 100%;
+	border-radius: 0 0 12px 12px;
+	box-shadow: $sombraCard;
+	justify-self: center;
+
+	
+	.logoM{
+		width: 8em;
+		margin-bottom:0.2em;
+	}
+	.nav-link{
+		color:$colorGris;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.2em;
+		margin-left: 1em;
+		}
+
+}
+
+.mainInicio{
+	margin-top:2em;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	width: 100%; 
+	height: 100vh;
+	
+	
+	#container{
+		width: 90%;
+		#row{
+			height: 50%;
+		}
+		.carousel-inner{
+			border-radius:0.78em;
+			box-shadow:$sombraCard;
+			align-items: stretch;
+			justify-content: stretch;
+		}
+		.carousel-item{
+					margin: 5px;
+		}
+	}
+	.tituloInicio{
+		color: $colorAzul;
+		font-weight: $fuenteBold;
+		font-size: 1.5em;
+		align-self: flex-start;
+		justify-self:flex-start;
+		margin-left:2em;
+		margin-top:0.8em;
+	}
+	.textoInicio{
+
+		
+	}
+}
+
+
+footer{
+	margin-top:1.5em;
+	font-family: $fuente;
+	background: $gradiente2;
+	color: $colorDorado;
+	display: flex;
+	flex-direction: row;
+	background-color:#1D314D;
+	min-height: 80px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top:1.5em;
+		.logoSocial{
+		margin-left:1em;
+		}
+}
+@mixin botones{
+	background-color:$colorDorado;
+	color:$colorAzul;
+	border-radius:4px;
+	padding:0.2em;
+}
+
+ 
+
+
+
+ .mainServicios{
+	height:36em;
+	margin-top: 1.5em;
+	margin-left: 25em;
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-template-columns:40% 40%;
+	grid-template-rows: 230px 30px 230px 30px;
+	grid-row-gap: 12px;
+	grid-column-gap: 20px;
+	grid-template-areas:
+	"muebles restauracion"
+	"tituloMuebles tituloRestauracion"
+	"remodelacion obras"
+	"tituloRemodelacion tituloObras";
+	
+		.muebles{
+		grid-area: muebles;
+		background-color:white;
+		border-radius: 0.6em;
+		background-image:url("../media/muebles a medida.jpg");
+		background-size:cover;
+		}
+		.tituloServicios{
+		font-family:$fuente;
+		color:$colorAzul;
+			a{
+				@include botones;
+			}	
+		}
+		.restauracion{
+		grid-area: restauracion;
+		background-color:white;
+		border-radius: 0.6em;
+		background-image:url("../media/restaurado.jpg");
+		background-size:cover;
+		}
+		.remodelacion{
+		grid-area: remodelacion;
+		background-color:white;
+		border-radius: 0.6em;
+		background-image:url("../media/remodelaciones.jpg");
+		background-size:cover;
+		}
+		.obras{
+		grid-area:obras;
+		background-color: white;
+		border-radius: 0.6em;
+		background-image:url("../media/pequeñas obras.jpg");
+		background-size:cover;
+		}
+	}	
+	.mainPorfolio{
+	display: grid;
+	height:36em;
+	width: 60vw;
+	margin-top: 1.5em;
+	margin-left: 20em;
+	margin-bottom: 1.5em;
+	align-content: center;
+	justify-content: center;
+	grid-template-columns:50vw 15vw;
+	grid-column-gap: 1em;
+	grid-template-rows:8em 8em 8em 2em;
+	grid-row-gap: 1em;
+	grid-template-areas:
+	"renderUno renderDos"
+	"renderUno renderTres"
+	"renderUno renderCuatro"
+	"pieDeImagen pieDeImagen"
+	
+	 
+	}
+	.imagenPrincipal{
+		grid-area: renderUno;
+		background-color: white;
+		border-radius: 0.6em;
+		background-image:url("../media/portfolio1.jpg");
+		background-size: cover;
+		box-shadow: 2px 2px  5px  #cdcdcc; 
+	}
+	.imagenDos{
+		grid-area: renderDos;
+		background-color: white;
+		border-radius: 0.6em;
+		background-image:url("../media/portfolio2.jpg");
+		background-size: cover;
+		box-shadow: 2px 2px  5px  #cdcdcc; 
+	}
+	.imagenTres{
+		grid-area: renderTres;
+		background-color: white;
+		border-radius: 0.6em;
+		background-image:url("../media/portfolio3.jpg");
+		background-size: cover;
+		box-shadow: 2px 2px  5px  #cdcdcc; 
+	}
+	.imagenCuatro{
+		grid-area: renderCuatro;
+		background-color: white;
+		border-radius: 0.6em;
+		background-image:url("../media/portfolio4.jpg");
+		background-size: cover;
+		box-shadow: 2px 2px  5px  #cdcdcc; 
+	}
+	.pieImagenPorfolio{
+		grid-area: pieDeImagen;
+		display: inline-block;
+		align-self:flex-start;
+	}
